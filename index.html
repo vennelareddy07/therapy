@@ -1,0 +1,1561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kanit:ital,wght@0,400;0,600;1,100;1,200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kanit:ital,wght@0,400;0,600;1,100;1,200&family=Pacifico&family=Prompt&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+            padding: 0px;
+            outline: 0px;
+            margin: 0px;
+            
+        }
+        .nav{
+            width: 100%;
+            height: 12vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: fixed;
+            top: 0px;
+            background-color: white;
+            z-index: 10;
+            
+            
+        }
+        .logo{
+            width: 7%;
+            height: 80%;
+            border-radius: 50%;
+            background-image: url("2.jpg");
+            background-size: 100% 100%;
+            display: flex;
+            align-items: center ;
+            justify-content: center;
+            font-size: 20px;
+            color: white;
+            font-weight: 900;
+            margin-left: 30px;
+           
+           
+        }
+        .name{
+            position: absolute;
+            top: 45px;
+            font-family:'Courier New', Courier, monospace
+        }
+        .menu{
+            display: flex;
+            width: 50%;
+            align-items: center;
+            justify-content: space-around;
+            font-size: 25px;
+        }
+        .down{
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        .up{
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        .fa-angle-down{
+            font-size: 18px;
+        }
+        #box0{
+            width: 17%;
+            height: 20vh;
+            border: 2px solid ghostwhite;
+            position: fixed;
+            top: 10%;
+            left: 37%;
+            z-index: 10;
+            align-items: center;
+            justify-content: space-around;
+            flex-direction: column;
+            background-color: white;
+            font-size: 20px;
+            font-family:'Times New Roman', Times, serif;
+            border-radius: 20px;
+            display: flex;
+        }
+        .box1{
+            margin-top: 5%;
+           
+        }
+        #the0{
+            width: 20%;
+            height: 30vh;
+            border: 2px solid ghostwhite;
+            position: fixed;
+            top: 10%;
+            left: 61%;
+            z-index: 10;
+            align-items: center;
+            justify-content: space-around;
+            flex-direction: column;
+            background-color: white;
+            font-size: 18px;
+            font-family:'Times New Roman', Times, serif;
+            border-radius: 20px;
+            display: none;
+        }
+        .the1{
+            margin-top: 5%;
+        }
+        .the12{
+            font-size: 15px;
+        }
+        .the14{
+            font-size: 15px;
+        }
+        .the16{
+            font-size: 15px;
+        }
+        .the18{
+            font-size: 15px;
+        }
+        
+        
+        /* .down:hover #box0{
+            display: block;
+        } */
+        .menu a{
+            text-decoration: none;
+            color: black;
+            font-size: 30px;
+        }
+        .log1 a{
+            text-decoration: none;
+            font-size: 25px;
+            color: white;
+        }
+        .log12 a{
+            color: orangered;
+            text-decoration: none;
+        }
+        .c a{
+            text-decoration: none;
+            color: white;
+        }
+        .n223 a{
+            text-decoration: none;
+            color: white;
+        }
+        .q13 a{
+            text-decoration: none;
+            color: white;
+        }
+        .log{
+            width: 20%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            margin-left: -150px;
+            font-size: 25px;
+
+        }
+        .log1{
+            width: 40%;
+            height: 50%;
+            border: 2px solid orangered;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .log12{
+            width: 40%;
+            height: 50%;
+            border: 2px solid orangered;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            color: orangered;
+        }
+        .first{
+            width: 100%;
+            height: 70vh;
+            background-image: url("1.jpg");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            margin-top: 6%;
+        }
+        .sub{
+            width: 30%;
+            height: 35%;
+            border: 2px solid white;
+            border-radius: 20px;
+            position: absolute;
+            background:linear-gradient(rgba(255, 255, 255, 0.9),rgba(255, 255, 255, 0.9));
+            top: 20%;
+            left: 7%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .a{
+            font-size: 35px;   
+            font-weight: 600;
+            color: orangered;
+        }
+        .b{
+            font-size: 18px;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin-left:25px ;
+
+        }
+        .c{
+            width: 40%;
+            height: 20%;
+        }
+        .c button{
+            width: 100%;
+            height: 100%;
+            border: 2px solid orangered;
+            border-radius: 20px;
+            background-color: orangered;
+            color: white;
+            font-size: 21px;
+        }
+        .bg{ width: 100%;
+            height: 80vh;
+             
+            background: url(bg1.jpg);
+            background-size: 100% 100%;
+            display: flex;
+            align-items: start;
+            justify-content: space-between;
+            flex-direction: column;
+           
+        }
+        .one{
+            width: 100%;
+            height: 50%;
+            align-items: start;
+            justify-content: space-around;
+            display: flex;
+            flex-direction: column;
+        }
+        .d{
+            font-size: 30px;
+            color:crimson;
+            font-weight: 600;
+            margin-left: 450px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .e{
+            font-size: 20px;
+        }
+        .quotation{
+            background-image: url(6.jpg);
+            width: 100%;
+            height: 20vh;
+            display: flex;
+            flex-direction: row;
+            justify-content:space-around
+        }
+        .g{
+             font-size: 25px; 
+            width: 60%;
+            margin-top: 15px;
+            font-family:'Kanit', sans-serif;
+        }
+        .quotation .f{
+            position: absolute;
+            left: 10%;
+            margin-top: 1%;
+            font-size: 30px;
+        }
+        .quotation .f1{
+            margin-top: 1%;
+            position: absolute;
+            right: 5%;
+            font-size: 30px;
+        }
+        .h{
+            height: 90vh;
+            width: 80%;
+            margin: auto;
+            grid-template-columns: 1fr 1fr ;
+            grid-template-rows: 1fr 1fr 1fr;
+            gap:10;
+            display:grid;
+            align-items: start;
+            justify-content: center;
+
+        }
+        .i{
+            height: 10%;
+            width: 100%;
+            grid-column: 1/3;
+            text-align: center;
+            margin-top: 25px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 25px;
+            color: indigo;
+        }
+        .j{
+            width: 70%;
+            height: 85%;
+            margin-left: 15%;
+            margin-top:-100px ;
+            color: indigo;
+            background-image: url(7.jpg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 70% 70%;
+            font-size: 20px;
+            text-align: center;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+        }
+        .k{
+            width: 70%;
+            height: 85%;
+            margin-left: 15%;
+            margin-top: -100px ;
+            background-image: url(8.jpg);
+            background-repeat: no-repeat;
+            color: indigo;
+            background-position: center center;
+            background-size: 70% 70%;
+            text-align: center;
+            font-size: 20px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .l{
+            width: 70%;
+            height: 85%;
+            margin-top: -10px;
+            margin-left: 15%;
+            color: indigo;
+            background-image: url(91.jpg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 70% 70%;
+            
+            text-align: center;
+            font-size: 20px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .m{
+            width: 70%;
+            height: 85%;
+            margin-left: 15%;
+            margin-top: -10px ;
+            background-image: url(10.jpg);
+            color: indigo;
+            background-repeat: no-repeat;
+            background-size: 70% 70%;
+            background-position: center center;
+            text-align: center;
+            font-size: 18px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .j1{
+            width: 90%;
+            height: 30vh;
+          margin-left: 10px;
+            margin-top: -25px;
+            border-radius: 20px;
+            display: none;
+            background: linear-gradient(rgba(229, 190, 229, 0.8),rgba(247, 234, 247, 0.8));
+            
+            
+            color: indigo;
+            
+
+        }
+        .j:hover .j1{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .k1{
+            width: 90%;
+            height: 30vh;
+            margin-left: 10px;
+            margin-top: -25px;
+            border-radius: 20px;
+            display: none;
+            background: linear-gradient(rgba(229, 190, 229, 0.8),rgba(247, 234, 247, 0.8));
+            
+            
+            color: indigo;
+            
+
+        }
+        .k:hover .k1{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .l1{
+            width: 90%;
+            height: 30vh;
+            margin-left: 10px;
+            margin-top: -25px;
+            border-radius: 20px;
+            display: none;
+            background: linear-gradient(rgba(229, 190, 229, 0.8),rgba(247, 234, 247, 0.8));
+            
+            
+            color: indigo;
+            
+
+        }
+        .l:hover .l1{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .m1{
+            width: 90%;
+            height: 30vh;
+            margin-left: 10px;
+            margin-top: -25px;
+            border-radius: 20px;
+            display: none;
+            background: linear-gradient(rgba(229, 190, 229, 0.8),rgba(247, 234, 247, 0.8));
+            
+            
+            color: indigo;
+            
+
+        }
+        .m:hover .m1{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .n{
+            height: 90vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-direction: column;
+
+        }
+        .n1{
+            width: 100%;
+            height: 10%;
+            font-size: 35px;
+            color: tomato;
+            text-align: center;
+            font-family: 'Prompt', sans-serif;
+        }
+        .n2{
+            width: 80%;
+            height: 90%;
+            display: flex;
+            
+        }
+        .n21{
+            width:50%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+         
+
+        }
+        .n211{
+            width: 50%;
+            height: 45%;
+            background-image: url(12.jpg);
+            background-size: 100% 100%;
+
+        }
+        .n212{
+            width: 100%;
+            height: 50%;
+            font-size: 17px;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            justify-content: space-around;
+            
+        }
+        .n2121{
+            font-family: 'Kanit', sans-serif;
+        }
+        .n22{
+            width: 30%;
+            height: 60%;
+            
+            margin-left: 120px;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+
+        }
+        .n221{
+            font-size: 25px;
+            text-align: center;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-weight: 600;
+            color: tomato;
+        }
+        .n222{
+            width: 70%;
+            height: 60%;
+            background-image: url(11.jpg);
+            align-items: center;
+            
+        }
+        .n223{
+            width: 40%;
+            height: 10%;
+        }
+        .n223 button{
+            width: 100%;
+            height: 100%;
+            border: 2px solid tomato;
+            
+            background-color:tomato;
+            color: white;
+            font-size: 15px;
+            margin-top: 20px;
+        }
+        .o{
+            width: 100%;
+            height: 150vh;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: space-between;
+            
+
+            position: relative;
+
+        }
+        .o  .o2{
+            position: absolute;
+            height: 85%;
+            top: 15vh;
+            margin-bottom: 20%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            /* height: 150vh; */
+            
+            /* padding-bottom: 20%; */
+        }
+        .con{
+            width: 900px;
+            height: 8vh;
+            border: 2px solid white;
+            border-radius: 20px;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            position: relative;
+            color:rgb(2, 46, 46);
+            background-color: rgb(151, 236, 236);
+            box-shadow: 0px 0px 10px 0px gray;
+
+        }
+        .des{
+            width: 900px;
+            height: 15vh;
+            border: 2px solid white;
+            background-color: rgb(230, 253, 253);
+            display: none;
+
+            border-radius: 20px;
+           font-size: 15px;
+            text-align: center;
+            padding-top: 20px;
+            
+           
+        }
+        .con i{
+            position: absolute;
+            right: 2vh;
+            bottom: 40%;
+        }
+        .o1{
+            font-size: 30px;
+            color: rgb(2, 46, 46);
+            height: 8vh;
+            
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+        }
+        .main{
+            width: 100%;
+            height: 80vh;
+            
+            display: flex;
+            justify-content: space-around;
+            position: relative;
+            align-items: center;
+            
+            flex-direction: column;
+            background-color: rgb(232, 241, 250);
+            
+        }
+        .p{
+            width: 30%;
+            height:20vh;
+           
+            display: flex;
+        }
+        .p img{
+            width: 100%;
+            height: 100%;
+        }
+        .p2{
+            position: absolute;
+         left: 60px;
+            width: 28%;
+            height: 35%;
+ display: flex;
+ flex-direction: column;
+
+ justify-content: space-around;
+ align-items: center;
+ 
+ 
+ 
+        }
+         .p3{
+            position: absolute;
+           left: 450px;
+            width: 28%;
+            height: 35%;
+ display: flex;
+ flex-direction: column;
+
+ justify-content: space-around;
+ align-items: center;
+ 
+        }
+        .p4{
+            position: absolute;
+         left: 840px;
+            width: 27.5%;
+            height: 35%;
+ display: flex;
+ flex-direction: column;
+ 
+ justify-content: space-around;
+ align-items: center;
+ 
+        }
+        .testimonial{
+            position: absolute;
+            bottom: 85%;
+            text-align: center;
+            align-items: center;
+            font-size: 30px;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            font-weight: 300;
+        }
+        .main1{
+            width: 100%;
+            height: 60%;
+            display: flex;
+            padding-top: 17%;
+        }
+        .lg{
+            width: 15%;
+            height: 12%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: -10%
+        }
+        .lg1{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid orangered;
+            color: orangered;
+            font-size: 23px;
+        }
+        .lg1:hover{
+            background-color: orangered;
+            color: white;
+        }
+        .q{
+            width: 100%;
+            height: 60vh;
+            
+            display: flex;
+            justify-content: space-around;
+        }
+        .q2{
+            background: url("15.jpg");
+            width: 25%;
+            height: 74%;
+            background-repeat: no-repeat;
+            
+            background-size: 100% 100%;
+            margin-top: 5%;
+            margin-right: 5%;
+            
+            
+        }
+        .q1{
+            height: 60%;
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            
+            margin-top: 4%;
+            padding-left: 4%;
+        }
+        .q11{
+            font-size: 35px;
+            font-weight: 500;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .q12{
+            width: 90%;
+            font-size: 15px;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+        }
+        .q13{
+            width: 20%;
+            height: 15%;
+            display: flex;
+            border-radius: 15px;
+            align-items: center;
+            justify-content: space-around;
+            background-color: orangered;
+            color: white;
+            font-size: 15px;
+        }
+        .r{
+            width: 100%;
+            height: 5vh;
+            background-color:darkolivegreen;
+            color: white;
+            align-items: center;
+            padding-top: 20px;
+            text-align: center;
+        }
+        .s{
+            width: 100%;
+            height: 80vh;
+        }
+        .s1{
+            height: 50%;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between
+        }
+        .s11{
+            width: 10%;
+            height: 40%;
+            border-radius: 50%;
+            background-image: url("2.jpg");
+            background-size: 100% 100%;
+            display: flex;
+            align-items: center ;
+            justify-content: center;
+            font-size: 20px;
+            color: white;
+            font-weight: 900;
+            margin-left: 60px;
+            margin-top: 5%;
+        }
+        .s111{
+            padding-top: 39%;
+            font-family:'Courier New', Courier, monospace;
+            font-size: 26px;
+        }
+        .s2{
+            height: 50%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        .s21{
+            width: 25%;
+            height: 30%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding-left:3% ;
+        }
+        .s12{
+            width: 70%;
+            height: 100%;
+            
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+        
+        .s121{  
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            width: 30%;
+            height: 60%;
+            justify-content: space-around;
+            
+        }
+        .s1211{
+            color:darkgrey
+        }
+        .s122{
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            width: 30%;
+            height: 60%;
+            justify-content: space-around;
+        }
+        .s123{
+            width: 30%;
+            height: 60%;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: space-around;
+        }
+        .sm{
+            width: 50%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        .s1232,.s1233,.s1234{
+            width: 35px;
+            height: 35px;
+            border: 2px solid black;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            transition: all 0.5s ;
+        }
+        .s1232:hover,.s1233:hover,.s1234:hover{
+            background-color: black;
+            color: white;
+            transform: rotate(360deg);
+        }
+        
+        .s211{
+            background-image: url("iso.webp");
+            width: 20%;
+            height: 70%;
+         
+            background-size: 100% 100%;
+            
+        }
+        .s212{
+            background-image: url("hippa.webp");
+            width: 20%;
+            height: 70%;
+      
+            background-size: 100% 100%;
+        }
+        .s213{
+            background-image: url("eu.webp");
+            width: 20%;
+            height: 70%;
+            
+            background-size: 100% 100%;
+        }
+        .s22{
+            height: 60%;
+            width: 90%;
+            
+            font-size: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            margin-bottom: 5%;
+            margin-left: 5%;
+            color:darkgray;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+        }
+        .s1221,.s1231{
+            color: darkgrey;
+        }
+        .menu0{
+            display: none;
+           
+                flex-direction: column;
+                width: 100%;
+                align-items: center;
+                justify-content: space-around;
+            background-color: white;
+                height: 130%;
+               
+                
+        }
+        .yash{
+            display: none;
+        }
+        #menu00{
+            display: none;
+        }
+        @media screen and (max-width:600px){
+            .menu{
+                display: none;
+            }
+            .logo{
+                width: 13%;
+
+            }
+            .menu0{
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                align-items: center;
+                justify-content: space-around;
+        
+                height: 20vh;
+             
+                
+                z-index: 100;
+                background-color: white;
+                
+            }
+            .yash{
+                display: block;
+                font-size: 30PX;
+                margin-right: 8%;
+               
+            }
+            .log{
+                display: none;
+            }
+            .menu0 a{
+                 text-decoration: none;
+                 color: black;
+            }
+            #menu00{
+               
+               width: 100%;
+                display: block;
+                position: fixed;
+                top: 12%;
+                z-index: 10;
+               }
+            .box{
+            position: absolute;
+           
+             /* font-size: 3px; */
+          
+            }  
+            #box0{
+                left: 65%;
+                font-size: 3px;
+                width: 95px;
+            height: 15vh;
+            top: 90px;
+                
+            }
+            .box1{
+                font-size: 13px;
+
+                
+            }
+           
+            .down{
+                position: relative;
+            } 
+          
+            #the0{
+                width: 36%;
+                height: 23vh;
+                font-size: 12px;
+                left: 63%;
+            }
+            .the12{
+                font-size: 12px;
+            }
+            .the14{
+                font-size: 12px;
+            }
+            .the16{
+                font-size: 12px;
+            }
+            .the18{
+                font-size: 12px;
+            }
+            .sub{
+                width: 40%;
+                height: 30vh;
+            }
+            .a{
+                font-size: 140%;
+            }
+            .b{
+                font-size: 100%;
+            }
+            .c button{
+                font-size: 80%;
+                height: 4vh;
+                
+            }
+            .bg{
+                height: 60vh;
+                font-size: 10px;
+            }
+            .e{
+                font-size: 14px;
+            }
+            .d{
+                font-size: 27px;
+                align-items: center;
+                margin-left: 35%;
+                
+            }
+            .quotation{
+                height: 17vh;
+            }
+            .g{
+                font-size: 15px;
+                width: 80%;
+            }
+            .quotation .f{
+                font-size: 19px;
+              
+                margin-left: -40px;
+            }
+            .quotation .f1{
+               font-size: 19px;
+            }
+            .j1{
+                font-size: 15px;
+            }
+            .k1{
+                font-size: 15px;
+            }
+            .l1{
+                font-size: 15px;
+            }
+            .m1{
+                font-size: 15px;
+            }
+            .n{
+                height: 80vh;
+            }
+            .n1{
+                font-size: 24px;
+            }
+            .n211{
+                height: 40%;
+                width: 70%;
+            }
+            .n212{
+                font-size: 14px;
+            }
+            .n221{
+                font-size: 18px;
+            }
+            .n222{
+                background-size: 100% 100%;
+                width: 100%;
+            }
+            .n223 button{
+                width: 150%;
+            }
+            .n223 a{
+                font-size: 10px;
+               
+
+            }
+            .main{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                height: 170vh;
+            }
+            .main1{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+        
+            .p2{
+                margin-left: 17%;
+                top: 13%;
+                width: 50%;
+                height: 20%;
+                font-size: 15px;
+                
+            }
+            .p3{
+                margin-left: -53%;
+                top:  38%;
+                width: 50%;
+                height: 20%;
+                font-size: 15px;
+                
+            }
+            .p4{
+                margin-left: -123%;
+                top: 63%;
+                width: 50%;
+                height: 20%;
+                font-size: 15px;
+                
+            }
+            .testimonial{
+            
+                top: 5%;
+                font-size: 24px;
+            }
+            .lg{
+                height: 5%;
+                width: 25%;
+                margin-top: 15%;
+            }
+            .o2{
+              
+                width: 80%;
+            }
+            .o1{
+                margin-top: 6%;
+                
+            }
+            .con{
+            
+                width: 100%;
+                height: 4%;
+            }
+            .des{
+                width: 100%;
+                font-size: 12px;
+                padding-top: 10px;
+            }
+            .q{
+                height: 55vh;
+            }
+            .q1{
+                width: 60%;
+            }
+            .q11{
+                font-size: 25px;
+                margin-top: 23%;
+            }
+            .q12{
+                margin-top: 10%;
+                font-size: 14px;
+            }
+            .q13{
+                width: 40%;
+                font-size: 13px;
+            
+                margin-top: 8%;
+            
+       
+            }
+            .q2{
+                height: 59%;
+                width: 35%;
+            }
+            .r{
+                font-size: 14px;
+                text-align: center; 
+            }
+            .s11{
+                margin-left: 5%;
+                width: 13%;
+                height: 26%;
+            }
+            .s111{
+                font-size: 19px;
+                margin-top: 10%;
+            }
+            .s12{
+                width: 75%;
+            }
+            .s121{
+                font-size: 13px;
+            }
+            .s122{
+                font-size: 13px;
+            }
+            .s123{
+                font-size: 13px;
+            }
+            .s1232{
+                width: 40%;
+                height: 20%;
+            }
+            .s1233{
+                width: 40%;
+                height: 20%;
+            }
+            .s1234{
+                width: 40%;
+                height: 20%;
+            }
+        }
+    </style>
+</head>
+<body>
+   <nav class="nav">
+    <div class="logo">
+        <div class="name">TARA</div>
+    </div>
+    <div class="yash">
+        <div class="yash1"><i class="fa-solid fa-bars" onclick="reveal(this)"></i></div>
+    </div>
+    <div class="menu">
+        <div><a href="http://127.0.0.1:5501/index.html">Home</a></div>
+        <div onmouseenter="fun()" onmouseleave="fun2()" class="down">We Help With<i class="fa-solid fa-angle-down"></i></div>
+        <div><a href="http://127.0.0.1:5501/contact.html">contact</a></div>
+        <div onclick="fun3()" ondblclick="fun4()" class="up">Counsellors<i class="fa-solid fa-angle-down"></i></div>
+        
+
+    </div>
+    <div id="menu00">
+    <div class="menu0">
+        <div><a href="http://127.0.0.1:5501/index.html">Home</a></div>
+        <div onmouseenter="fun()" onmouseleave="fun2()" class="down">We Help With<i class="fa-solid fa-angle-down"></i></div>
+        <div><a href="http://127.0.0.1:5501/contact.html">contact</a></div>
+        <div onclick="fun3()" ondblclick="fun4()" class="up">Counsellors<i class="fa-solid fa-angle-down"></i></div>
+        
+
+    </div>
+</div>
+    <script>
+        function reveal(e){
+
+           if(e.classList.contains('fa-bars')){
+    document.getElementsByClassName("menu0")[0].style.display="flex"
+    e.className="fa-solid fa-x"
+}
+else{
+document.getElementsByClassName("menu0")[0].style.display="none"
+e.className="fa-solid fa-bars"
+}
+}
+    </script>
+    <div class="log">
+        <div class="log1" style="background-color: orangered;color: white;"><a href="http://127.0.0.1:5501/signup.html">Sign Up</a></div>
+        <div class="log12" style="color:orangered"><a href="http://127.0.0.1:5501/login.html">Login</a></div>
+    </div>
+   </nav>
+   <div id="box0">
+   <div class="box" onmouseenter="fun()" onmouseleave="fun2()" > 
+    <div class="box1">Anxity</div>
+    <div class="box1">Depression</div>
+    <div class="box1">Stress</div>
+    <div class="box1">Bipolar Disorder</div>
+   </div> 
+</div>
+<script>
+      let abc=document.getElementById("box0")
+     abc.style.display="none"
+    function fun(){
+        let col=document.getElementsByClassName("b2")
+        console.log("f1")
+        abc.style.display="flex"
+         for (i=0;i<col.length;i++){
+          col[i].style.color="red"
+        }
+      
+    }
+    function fun2(){
+        console.log("f2")
+        abc.style.display="none"
+    }
+</script>
+<div id="the0">
+    <div class="the" onclick="fun3()" ondblclick="fun4()" >
+     <div class="the1">
+        <div class="the11">Puja Roy</div>
+        <div class="the12">Msc in Health Psychology</div>
+     </div>
+     <div class="the1">
+        <div class="the13">Sana Panagar</div>
+        <div class="the14">MA in Clinical Psychology</div>
+     </div>
+     <div class="the1">
+        <div class="the15">Tanuka Ray</div>
+        <div class="the16">MA in Counselling Psychology</div>
+     </div>
+     <div class="the1">
+        <div class="the17">Aditi Mishra</div>
+        <div class="the18">M.Sc. in Clinical Psychology</div>
+     </div>
+    </div> 
+ </div>
+ <script>
+       let abc1=document.getElementById("the0")
+      abc1.style.display="none"
+     function fun3(){
+         console.log("f1")
+         abc1.style.display="flex"
+     }
+     function fun4(){
+         console.log("f2")
+         abc1.style.display="none"
+     }
+ </script>
+   <div class="first">
+    <div class="sub">
+        <div class="a">Talk.Resolve.Heal</div>
+        <div class="b">Online Counselling Therapy With Top Psychologists<br/>Anytime, Anywhere, Any device.</div>
+        <div class="c"><button><a href="http://127.0.0.1:5501/signup.html">Get Started</a></button></div>
+    </div>
+</div>
+   <div class="bg">
+   <div class="one">
+    <div class="d">The Problem</div>
+    <div class="e">India’s mental health is in a state of crisis. While 1 billion people around the world live with a mental health condition, India alone accounts for a third of the global burden of depression, addictions and suicides. India has the youngest population in the world - and yet, over 100 million children and youth have diagnosed mental health conditions.</div>
+    <div class="e">Due to a combination of poor awareness, stigma, and lack of access to quality care, a person who is struggling with their mental health often does not receive the treatment and care they need to get better.</div>
+   </div>
+   <div class="one">
+    <div class="d" style="color: green;">The TARA Solution</div>
+    <div class="e">TARA is transforming the way mental healthcare is delivered in India, by bringing together the latest science in clinical practice and modern technological tools to deliver the best outcome for each individual and family. Our integrated mental health ecosystem offers treatment, care and support for all kinds of mental health concerns.</div>
+    <div class="e">Using the experience and expertise of our team of trained mental health professionals, we strive to ensure that each individual can navigate their mental healthcare journey seamlessly and easily.</div>
+   </div>
+</div>
+<div class="quotation">
+    <div class="f"><i class="fa-solid fa-quote-left"></i></div>
+    <div class="g">No matter where you are in your mental health journey, TARA will meet you there and partner with you - so you can feel better, get better, and stay better.</div>
+    <div class="f1"><i class="fa-solid fa-quote-right"></i></div>
+</div>
+<div class="h"><div class="i">Area Of Expertise</div>
+<div class="j">Anxity
+    <div class="j1">Leave behind your apprehensions and take charge of your life in a calm manner
+    </div>
+</div>
+<div class="k">Depression
+    <div class="k1">Fight through those suffocating feelings and make a positive change
+    </div>
+</div>
+<div class="l">Stress
+    <div class="l1">Learn to cope with your everyday tasks and enhance your productivity
+    </div>
+</div>
+<div class="m">Bipolar Disorder
+    <div class="m1">Self-care to cope with your condition and minimize any challenges that come up</div>
+</div>
+</div>
+<div class="n">
+    <div class="n1">Best Therapists In India</div>
+    <div class="n2">
+        <div class="n21">
+            <div class="n211"></div>
+            <div class="n212">
+                <div class="n2121">Our in-house team of mental health therapist and psychiatrists is highly qualified and trained to deliver quality and compassionate clinical treatment.</div>
+                <div class="n2121">Our team follows proprietary clinical protocols & undergoes peer supervision to ensure each individual gets exceptional care, either online or in person.</div>
+            </div>
+        </div>
+        <div class="n22">
+            <div class="n221">Still Confused?</div>
+            <div class="n222"></div>
+            <div class="n223"><button><a href="http://127.0.0.1:5501/signup.html">Begin Therapy</a></button></div>
+        </div>
+    </div>
+</div>
+<div class="o">
+    <div class="o1">Frequently Asked Questions</div>
+    <div class="o2">
+<div class="con">What is TARA?
+    <div><i class="fa-solid fa-caret-down" onclick="hide('0')"></i></div>
+</div>
+<div class="des">TARA is the largest online counselling platform in India providing online counselling and other allied mental health services. We alter the perspective on mental health and help people to manage life’s challenges by providing accessible, secure, confidential and affordable online counselling. With the team of certified, experienced best therapists in India , online counsellors, online psychiatrist, you can consult a certified therapist anytime, anywhere, from any device.</div>
+<div class="con">Is TARA ‘Right Choice’ for my Wellbeing?
+    <div><i class="fa-solid fa-caret-down" onclick="hide('1')"></i></div>
+</div>
+<div class="des">TARA is the best online therapy platform in India. It is right choice for you if you're looking to attain better mental health wellness. It helps in improving quality of your life if there is anything that is interfering with your happiness or is preventing you from achieving your goals. Connect with the best psychologists in India,online psychiatrist to resolve issues such as depression, anxiety, anger, family conflict, grief and loss, low self-esteem, work-life balance, career counselling.</div>
+<div class="con" >What are the qualification of the therapist at TARA?
+    <div><i class="fa-solid fa-caret-down" onclick="hide('2')"></i></div>
+</div>
+<div class="des">All therapists at TARA are trained, experienced, and qualified mental health professionals providing online therapy services. Online Therapists at TARA are experienced and qualified, having a Master's degree in Clinical Psychology or Counselling Psychology. They may also possess M. Phil or a Ph.D. in clinical psychology or an equivalent qualification from an accredited institution. However, an online psychiatrist has an MD or a Diploma in Psychiatric Medicine in addition to MBBS. </div>
+<div class="con">How Counselling Online can be helpful?
+    <div><i class="fa-solid fa-caret-down" onclick="hide('3')"></i></div>
+</div>
+<div class="des">Counselling helps people to find solutions to self-doubt, bring clarity to existing problem, attain wellbeing and growth in life. It is an effective way to identify one’s issues, gain insight and confidence to be productive and have a good quality of life. Counselling is seeking unbiased professional help from the “Best Therapists", top psychologists in India and the best psychiatrist in India to overcome one’s psychological disturbances. </div>
+<div class="con">In how many languages is online counselling offered at TARA?
+    <div><i class="fa-solid fa-caret-down" onclick="hide('4')"></i></div>
+</div>
+<div class="des">According to American Psychological Association, therapy is twice effective in native language. Keeping this in mind, TARA through its team of top psychologists in India, online marriage counsellors and best psychiatrist in India brings to you the best online counselling services and top online psychiatric consultation in 18+ Indian languages namely; English, Assamese, Bengali/Bangla, German, French, Gujarati, Hindi, Kannada, Kashmiri, Malayalam, Marathi, Nepali, Punjabi, Sanskrit, Sindhi, Tamil, Telugu, Urdu, Odia, and Maithili. </div>
+<div class="con">Is Online Therapy as effective as an In-person Therapy?
+    <div><i class="fa-solid fa-caret-down" onclick="hide('5')"></i></div>
+</div>
+<div class="des">Online Counselling is very similar to the conventional form of counselling to resolve the mental health issues with an added advantage of comfort, affordability, and ease. Online Counselling or Online Therapy is a use of guided therapies like CBT, ACT, DBT etc. by a trained psychologist having an adequate expertise for treatment of stress, anxiety, depression, etc. There are number of studies supporting the fact that the online therapies are as adequate and effective as traditional in-person counselling. The confidence in our platform is substantiated by the feedback and reviews, we frequently receive from our users.</div>
+<div class="con">How is my privacy protected?
+    <div><i class="fa-solid fa-caret-down" onclick="hide('6')"></i></div>
+</div>
+<div class="des">We take your privacy and confidentiality very seriously while delivering online counselling sessions. We have built a self-curated state-of-the-art HIPPA compliant technology, and infrastructure, with the goal to protect your privacy and information during your online therapy. Everything you tell your therapist during your online counselling session is confidential. We don't cooperate or work with any third-party companies and so nothing needs to be shared, reported, or filed with them. All the messages between you and your therapist during an online therapy session are secured and encrypted. </div>
+<div class="con">What to keep in mind during online counselling?
+    <div><i class="fa-solid fa-caret-down" onclick="hide('7')"></i></div>
+</div>
+<div class="des">It is important to keep in mind few pointers before you begin online counselling. Do ensure that you have access to good internet connection in your device for seamless and un-interrupted online counselling. Also, do ensure that the place or location chosen is a private and comfortable environment which allows you to speak freely with your therapist during online therapy session. </div>
+</div>
+</div>
+
+<script>
+    let d=document.getElementsByClassName("des")
+    let icon=document.getElementsByTagName("i")
+    let lastopen
+    function hide(i){
+        if (lastopen && lastopen!=i){
+            d[lastopen].style.display="none"
+            icon[lastopen].className="fa-solid fa-caret-down"
+        }
+        if(d[i].style.display=="block"){
+            d[i].style.display="none"
+            icon[i].className="fa-solid fa-caret-down"
+        }
+        else{
+            d[i].style.display="block"
+            icon[i].className="fa-solid fa-caret-up"
+            lastopen=i
+
+        }
+    }
+    
+</script>
+
+<div class="main">
+    <div class="testimonial">What People Say About TARA</div>
+       
+      <div class="main1">
+        <div class="p">
+        <div class="p2">
+            <div class="p21">onkar</div>
+            <div class="p22">software</div>
+            <div class="p24"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <div class="p23">Therapy with TARA gave me a new lease of life. I was at the point of ending things & within a matter 21 days I felt like I got my life back. I am so grateful for the timely help and unconditional support from TARA.</div>
+    </div> 
+       
+        </div>
+        <div class="p">
+            <div class="p3">
+                <div class="p21">yasodha</div>
+                <div class="p22">front end</div>
+                <div class="p24"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                <div class="p23">I was unsure about starting therapy when I reached out to TARA. Their personalized therapy plans, 24/7 support & absolute flexibility in terms of choosing time or therapist got me to enrol. I have learnt to manage my anxiety so well. My panic attacks are a thing of distant past now.</div>
+            </div>    
+     
+     </div>
+        <div class="p"> 
+            <div class="p4">
+                <div class="p21">mohitha</div>
+                <div class="p22">homemaker</div>
+                <div class="p24"><i class="fa-solid fa-star"></i><i class=" fa-solid fa-star"></i><i class=" fa-solid fa-star"></i><i class=" fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                <div class="p23">When I finally held my baby in my arms after 9 months of waiting and expecting, I didn’t really feel flooded with love or attachment. To the contrary I felt overwhelmed and despondent. When I reached out to TARA, I was full of guilt and shame for feeling this way.</div>
+            </div>   
+            
+    
+        </div>
+    </div>
+    <div class="lg">
+    <span class="lg1"><i class="fa-solid fa-less-than" id="i1"onclick="leftslide()"></i></span>
+
+        <span class="lg1"><i class="fa-solid fa-greater-than" id="i1"onclick="slide()"></i></span>
+
+    </div>
+</div>
+    <script>
+        let p2=["onkar","yasodha","mohitha","vikas","sneha"]
+        let p21=["software","front end","homemaker","student","software"]
+        let p5=["Therapy with TARA gave me a new lease of life. I was at the point of ending things & within a matter 21 days I felt like I got my life back. I am so grateful for the timely help and unconditional support from TARA.","I was unsure about starting therapy when I reached out to TARA. Their personalized therapy plans, 24/7 support & absolute flexibility in terms of choosing time or therapist got me to enrol. I have learnt to manage my anxiety so well. My panic attacks are a thing of distant past now.","When I finally held my baby in my arms after 9 months of waiting and expecting, I didn’t really feel flooded with love or attachment. To the contrary I felt overwhelmed and despondent. When I reached out to TARA, I was full of guilt and shame for feeling this way.","College was not what I expected. I felt so marginalised, had lost all confidence & could not cope with the academic stress & my strained relationship. My therapist at TARA helped me find my self esteem & confidence. She also helped me with effective coping mechanisms for my stress & relationship issues.","Therapy with TARA gave me a new lease of life. I was at the point of ending things & within a matter 21 days I felt like I got my life back. I am so grateful for the timely help and unconditional support from TARA."]
+        let i=0
+     let  br= document.getElementsByTagName("img")
+        function leftslide(){
+            i--
+            if(i==-1){
+                i=4
+            }
+            document.getElementsByClassName("p21")[0].innerHTML=p2[ (i)%5]
+            document.getElementsByClassName("p22")[0].innerHTML=p21[(i)%5]
+            document.getElementsByClassName("p23")[0].innerHTML=p5[(i)%5]
+        }
+        function slide(){
+            i++
+            
+            for(let j=0;j < 3 ;j++){
+                    document.getElementsByClassName("p21")[j].innerHTML=p2[ (i +j)%5]
+                    document.getElementsByClassName("p22")[j].innerHTML=p21[(i+j)%5]
+                    document.getElementsByClassName("p23")[j].innerHTML=p5[(i+j)%5]
+                
+                }
+
+
+        }
+        setInterval(slide,2000)
+    </script>
+    <div class="q">
+        <div class="q1">
+            <div class="q11">Need help for someone you care about?</div>
+            <div class="q12">We know how hard it is to watch someone you care about struggling. Finding the right care is the first step. If you want guidance on the best mental health support for yourself or a loved one an Amaha Care Consultant can help you.</div>
+            <div class="q13"><a href="http://127.0.0.1:5501/signup.html">CONNECT WITH US</a></div>
+        </div>
+        <div class="q2"></div>
+    </div>
+    <div class="r">If you didn't find what you were looking for, please reach out to us at support@tara.com  or +913071171501. We're here for you - for anything you might need.</div>
+    <div class="s">
+        <div class="s1">
+            <div class="s11">
+                <div class="s111">TARA</div>
+            </div>
+            <div class="s12">
+                <div class="s121">
+                    <div class="s1211">CONTACT US</div>
+                    <div class="s1212">Monday - Friday: 9:00 - 17:30</div>
+                    <div class="s1213">(+44) 7038 686242</div>
+                    <div class="s1214">enquiries@tara.com</div>
+                </div>
+                <div class="s122">
+                    <div class="s1221">ADDRESS</div>
+                    <div class="s1222">Sahphire Space vard, Bani Park,Jaipur 302016, India</div>
+                    <div class="s1223">Company Registration Number: 08479007</div>
+                </div>
+                <div class="s123">
+                    <div class="s1231">Follow us at Social Media</div>
+                    <div class="sm">
+                    <div class="s1232"><i class="fa-brands fa-facebook"></i></div>
+                    <div class="s1233"><i class="fa-brands fa-instagram"></i></div>
+                    <div class="s1234"><i class="fa-brands fa-youtube"></i></div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="s2">
+            <div class="s21">
+                <div class="s211"></div>
+                <div class="s212"></div>
+                <div class="s213"></div>
+            </div>
+            <div class="s22">
+                <div class="s221">TARA does not deal with medical or psychological emergencies. We are not designed to offer support in crisis situations - including when an individual is experiencing thoughts of self-harm or suicide, or is showing symptoms of severe clinical disorders such as schizophrenia and other psychotic conditions. In these cases, in-person medical intervention is the most appropriate form of help.</div>
+                <div class="s222">If you feel you are experiencing any of these difficulties, we would urge you to seek help at the nearest hospital or emergency room where you can connect with a psychiatrist, social worker, counsellor or therapist in person. We recommend you to involve a close family member or a friend who can offer support.</div>
+                <div class="s223">You can also reach out to a suicide hotline in your country of residence: http://www.healthcollective.in/contact/helplines</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
